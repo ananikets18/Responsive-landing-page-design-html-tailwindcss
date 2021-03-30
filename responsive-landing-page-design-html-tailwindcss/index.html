@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resonsive Landing Page - HTML & TailwindCSS | Javascript(GSAP)</title>
+    <!-- TailwindCSS File -->
+    <link rel="stylesheet" href="./css/dist.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <main class="container mx-auto px-3 py-1.5 flex flex-row items-center justify-between lg:border-none border-b">
+                <!-- logo -->
+                <div class="flex flex-col items-center justify-center nav_logo">
+                    <h2 class="text-xl text-gray-900 uppercase font-semibold tracking-widest">sony</h2>
+                    <span class="text-xs text-gray-800">make.believe</span>
+                </div>
+                <!-- nav menu -->
+                <div class="lg:block hidden nav_items">
+                    <ul class="flex items-center space-x-5">
+                        <li>
+                            <a href="#" class="text-gray-700 text-sm capitalize">
+                                / Playstation
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-gray-700 text-sm capitalize">
+                                / support
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-gray-700 text-sm capitalize">
+                                / entertainment
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- store locator btn -->
+                <div class="lg:block hidden store_locator">
+                    <button class="focus:outline-none text-gray-700 text-sm capitalize flex items-center">
+                        store locator <svg class="w-4 h-4 text-gray-500 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                    </button>
+                </div>
+       
+                <!-- Mobile Menu btn -->
+                <div class="lg:hidden block mobile_menu">
+                    <button class="focus:outline-none" onclick="mob_menu()">
+                        <svg class="w-5 h-5 text-gray-600"  fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" id="menu_bar" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                        <path stroke-linecap="round" class="hidden" id="close_menu" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                        </svg>
+                    </button>
+                </div>
+            </main>
+            <!-- mob_menu -->
+            <section class="px-4 pt-4 lg:hidden block">
+                <main class="hidden" id="menu">
+                    <ul class="flex flex-col space-y-3">
+                        <li>
+                            <a href="#" class="text-gray-700 hover:text-gray-900 text-sm capitalize">
+                                / Playstation
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-gray-700 hover:text-gray-900 text-sm capitalize">
+                                / support
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-gray-700 hover:text-gray-900 text-sm capitalize">
+                                / entertainment
+                            </a>
+                        </li>
+                        <li>
+                            <button class="focus:outline-none text-gray-700 text-sm capitalize flex items-center">
+                                store locator <svg class="w-4 h-4 text-gray-500 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                            </button>
+                        </li>
+                    </ul>
+                </main>
+            </section>
+        </nav>
+    </header>
+
+    <!-- ==== Main ==== -->
+    <section class="h-screen grid grid-cols-1 lg:grid-cols-3 gap-0 container mx-auto mt-5 lg:mt-10">
+        <main class="flex flex-col items-center max-h-max lg:mt-20">
+            <div class="info">
+                <span class="text-xs md:text-sm lg:text-sm text-gray-800 font-semibold tracking-wider">/ Pro Experience</span>
+                <h4 class="text-3xl lg:text-4xl font-semibold text-gray-700 tracking-wide">I'm Gaming DNA</h4>
+                <h1 class="text-8xl text-black font-extrabold -ml-1 my-4 ps5-text">PS5</h1>
+                <div class="flex flex-row items-center space-x-3">
+                    <button class="focus:outline-none capitalize text-sm lg:text-md text-gray-100 bg-gray-800 w-28 lg:w-40 h-7 lg:h-10 flex items-center justify-center lg:mt-14 hoverb:bg-gray-900">shop now <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                    </button>
+                    <button class="capitalize text-sm md:text-md lg:text-md text-black w-40 h-10 font-semibold lg:mt-14">Watch trailer</button>
+                </div>
+                <div class="lg:mt-20 mt-6 mb-24 lg:mb-0 social">
+                    <ul class="flex items-center space-x-4">
+                        <li>
+                            <a href="#" class="text-xs md:text-sm lg:text-sm text-gray-800 font-semibold capitalize">
+                                / twitter
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-xs md:text-sm lg:text-sm text-gray-800 font-semibold capitalize">
+                                / facebook
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-xs md:text-sm lg:text-sm text-gray-800 font-semibold capitalize">
+                               / youtube
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </main>
+
+        <!-- Image -->
+        <main class="flex flex-col items-center justify-center img_container max-w-max max-h-max">
+            <div class="img_ -mt-20">
+                <img src="./img/ps5-hd.png" alt="PS5 Image" class="ps5-hd">
+            </div>
+        </main>
+
+        <!-- More Info -->
+        <main class="pb-16 details">
+            <div class="">
+                <ul class="flex flex-col lg:items-center px-5 space-y-4 lg:mt-8 lg:mt-16">
+                    <a href="#">
+                        <li class="border-b border-gray-200 pb-3">
+                            <main class="flex space-x-3 pb-3">
+                                <div>
+                                    <img src="./img/ps5-controller.png" alt="ps5-controller" class="w-24 object-cover">
+                                </div>
+                                <div class="flex flex-col">
+                                    <h5 class="text-gray-800 text-md tracking-wider font-semibold">PS5 Controller</h5>
+                                    <a href="#" class="text-sm text-gray-800 tracking-wider border-b-2 border-gray-300 w-max">Shop Now</a>
+                                </div>
+                            </main>
+                        </li>
+                    </a>
+                    <a href="#">
+                        <li class="border-b border-gray-200 pb-3">
+                            <main class="flex space-x-3 pb-3">
+                                <div>
+                                    <img src="./img/remote.png" alt="ps5-remote" class="w-24 object-cover">
+                                </div>
+                                <div class="flex flex-col">
+                                    <h5 class="text-gray-800 text-md tracking-wider font-semibold">PS5 Remote</h5>
+                                    <a href="#" class="text-sm text-gray-800 tracking-wider border-b-2 border-gray-300 w-max">Shop Now</a>
+                                </div>
+                            </main>
+                        </li>
+                    </a>
+
+                    <a href="#">
+                        <li class="border-b border-gray-200 pb-3">
+                            <main class="flex space-x-3 pb-3">
+                                <div>
+                                    <img src="./img/psf-hd-camara.png" alt="ps5-hd-camara" class="w-24 object-cover">
+                                </div>
+                                <div class="flex flex-col">
+                                    <h5 class="text-gray-800 text-md tracking-wider font-semibold">PS5 HD Camara</h5>
+                                    <a href="#" class="text-sm text-gray-800 tracking-wider border-b-2 border-gray-300 w-max">Shop Now</a>
+                                </div>
+                            </main>
+                        </li>
+                    </a>
+
+                    <a href="#">
+                        <li>
+                            <main class="flex space-x-3">
+                                <div>
+                                    <img src="./img/console.png" alt="ps5-console" class="w-24 object-cover">
+                                </div>
+                                <div class="flex flex-col">
+                                    <h5 class="text-gray-800 text-md tracking-wider font-semibold">PS5 Console</h5>
+                                    <a href="#" class="text-sm text-gray-800 tracking-wider border-b-2 border-gray-300 w-max">Shop Now</a>
+                                </div>
+                            </main>
+                        </li>
+                    </a>
+                </ul>
+            </div>
+        </main>
+    </section>
+
+
+
+    
+<!--  ==== JQuery CDN  ==== -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<!-- ==== GSAP CDN ==== -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+<!-- ====  CUSTOM SCRIPT ==== -->
+<script src="script.js" defer></script>
+</body>
+</html>

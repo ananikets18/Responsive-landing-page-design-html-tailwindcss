@@ -1,0 +1,56 @@
+/* ====  FONt FAMILY BY GOOGLE => Oswald  ===== */
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap');
+/* ====  FONt FAMILY BY GOOGLE => Inter  ===== */
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+/* ==== Root  ===== */
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: 'Inter',sans-serif;
+}
+/* ====  Heading 2  ===== */
+h2{
+font-family: 'aleo',sans-serif;
+}
+/* ==== IMAGE ===== */
+.img_{
+width: 899px;
+}
+/* ==== Heading 1 ===== */
+h1{
+font-family: 'Oswald',sans-serif;
+}
+
+/* ====  TEXT STROKE  ===== */
+@supports (-webkit-text-stroke: 1.2px rgb(39,39,39))
+{
+    h4{
+        -webkit-text-stroke: 1.2px rgb(46, 46, 46);
+        -webkit-text-fill-color:white;
+        font-family: 'Lato',sans-serif;
+        }
+}
+
+
+/* ==== Scrollbar  ===== */
+::-webkit-scrollbar{
+width: 5px;
+}
+::-webkit-scrollbar-track{
+background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb{
+background: #888;
+}
+::-webkit-scrollbar-thumb:hover{
+background: #555;
+}
+
+/* ==== Media Query  ===== */
+@media screen and (max-width:991px){
+.img_{
+width: 100%;
+}
+}
